@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Biblioteca de imágenes | Electromecánica Industrial</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+
+<body>
+
+
+<header class="encabezado">
+
+    <div class="contenedor">
+
+        <h1>⚙️ Electromecánica Industrial</h1>
+
+        <nav>
+
+            <a href="index.html">Inicio</a>
+
+            <a href="cursos.html">Cursos</a>
+
+            <a href="imagenes.html">Imágenes</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <section class="seccion">
+
+        <div class="contenedor">
+
+            <h2>🖼️ Biblioteca de imágenes</h2>
+
+            <p>
+                Consulta imágenes relacionadas con los diferentes temas
+                de Electromecánica Industrial.
+            </p>
+
+
+            <!-- BUSCADOR -->
+
+            <input
+                type="text"
+                id="buscador"
+                class="buscador"
+                placeholder="🔎 Buscar un componente, herramienta o tema..."
+            >
+
+
+            <!-- CATEGORÍAS -->
+
+            <div class="categorias">
+
+                <button class="categoria activa" data-categoria="todos">
+                    Todos
+                </button>
+
+                <button class="categoria" data-categoria="electricidad">
+                    ⚡ Electricidad
+                </button>
+
+                <button class="categoria" data-categoria="electronica">
+                    🔌 Electrónica
+                </button>
+
+                <button class="categoria" data-categoria="soldadura">
+                    🔥 Soldadura
+                </button>
+
+                <button class="categoria" data-categoria="motores">
+                    ⚙️ Motores
+                </button>
+
+                <button class="categoria" data-categoria="neumatica">
+                    💨 Neumática
+                </button>
+
+                <button class="categoria" data-categoria="hidraulica">
+                    💧 Hidráulica
+                </button>
+
+            </div>
+
+
+            <!-- GALERÍA -->
+
+            <div class="galeria">
+
+
+                <!-- RESISTENCIA -->
+
+                <article
+                    class="imagen-card"
+                    data-categoria="electronica"
+                    data-nombre="resistencia componente electronico"
+                >
+
+                    <a href="imagenes/resistencia.html">
+
+                        <h3>Resistencia</h3>
+
+                        <img
+                            src="img/resistencia.jpg"
+                            alt="Resistencia electrónica"
+                        >
+
+                    </a>
+
+                </article>
+
+
+                <!-- CAPACITOR -->
+
+                <article
+                    class="imagen-card"
+                    data-categoria="electronica"
+                    data-nombre="capacitor condensador componente electronico"
+                >
+
+                    <a href="imagenes/capacitor.html">
+
+                        <h3>Capacitor</h3>
+
+                        <img
+                            src="img/capacitor.jpg"
+                            alt="Capacitor electrónico"
+                        >
+
+                    </a>
+
+                </article>
+
+
+                <!-- DIODO -->
+
+                <article
+                    class="imagen-card"
+                    data-categoria="electronica"
+                    data-nombre="diodo componente electronico"
+                >
+
+                    <a href="imagenes/diodo.html">
+
+                        <h3>Diodo</h3>
+
+                        <img
+                            src="img/diodo.jpg"
+                            alt="Diodo electrónico"
+                        >
+
+                    </a>
+
+                </article>
+
+
+                <!-- SOLDADURA -->
+
+                <article
+                    class="imagen-card"
+                    data-categoria="soldadura"
+                    data-nombre="tipos de soldadura soldadura"
+                >
+
+                    <a href="imagenes/tipos-soldadura.html">
+
+                        <h3>Tipos de soldadura</h3>
+
+                        <img
+                            src="img/soldadura.jpg"
+                            alt="Tipos de soldadura"
+                        >
+
+                    </a>
+
+                </article>
+
+
+            </div>
+
+
+            <!-- MENSAJE SIN RESULTADOS -->
+
+            <p id="sin-resultados" class="sin-resultados">
+                No se encontraron imágenes.
+            </p>
+
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 Electromecánica Industrial
+    </p>
+
+</footer>
+
+
+<script src="js/app.js"></script>
+
+</body>
+
+</html>

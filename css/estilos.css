@@ -1,0 +1,692 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+    line-height: 1.6;
+}
+
+
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+/* ENCABEZADO */
+
+.encabezado {
+    background: #17202a;
+    color: white;
+    padding: 20px 0;
+}
+
+
+.encabezado .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.encabezado h1 {
+    font-size: 22px;
+}
+
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* HERO */
+
+.hero {
+    background: #dfeaf3;
+    padding: 80px 0;
+    text-align: center;
+}
+
+
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+
+.hero p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 18px;
+}
+
+
+.botones {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+.boton {
+    display: inline-block;
+    padding: 12px 22px;
+    background: #1f618d;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+
+.boton:hover {
+    opacity: 0.85;
+}
+
+
+.boton-secundario {
+    background: #34495e;
+}
+
+
+/* SECCIONES */
+
+.seccion {
+    padding: 50px 0;
+}
+
+
+.seccion h2 {
+    margin-bottom: 10px;
+}
+
+
+/* TARJETAS */
+
+.tarjetas {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+.tarjeta {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+
+.icono {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+
+/* SEMESTRES */
+
+.semestres {
+    margin-top: 30px;
+}
+
+
+.semestre {
+    margin-bottom: 15px;
+}
+
+
+.boton-semestre {
+    width: 100%;
+    border: none;
+    background: #17202a;
+    color: white;
+    padding: 18px;
+    font-size: 18px;
+    text-align: left;
+    border-radius: 8px;
+    cursor: pointer;
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.boton-semestre:hover {
+    background: #273746;
+}
+
+
+.contenido-semestre {
+    display: none;
+    background: white;
+    padding: 15px;
+    border-radius: 0 0 8px 8px;
+}
+
+
+.contenido-semestre.activo {
+    display: block;
+}
+
+
+.curso {
+    display: block;
+    color: #1f618d;
+    text-decoration: none;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.curso:hover {
+    background: #f2f4f4;
+}
+
+
+/* BUSCADOR */
+
+.buscador {
+    width: 100%;
+    padding: 15px;
+    margin: 25px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+
+/* GALERÍA */
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+.imagen-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+
+.imagen-card h3 {
+    margin-bottom: 12px;
+}
+
+
+.imagen-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+
+/* PIE DE PÁGINA */
+
+footer {
+    background: #17202a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+
+/* CELULARES */
+
+@media (max-width: 700px) {
+
+    .encabezado .contenedor {
+        flex-direction: column;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ============================= */
+/* PÁGINA DE CURSO */
+/* ============================= */
+
+.curso-hero {
+    background: #dfeaf3;
+    padding: 50px 0;
+}
+
+
+.curso-hero h2 {
+    font-size: 38px;
+    margin-top: 20px;
+}
+
+
+.curso-hero p {
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+
+.volver {
+    color: #1f618d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.volver:hover {
+    text-decoration: underline;
+}
+
+
+.curso-contenido {
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+
+.curso-contenido h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+
+.curso-contenido h2:first-child {
+    margin-top: 0;
+}
+
+
+.lista {
+    padding-left: 25px;
+}
+
+
+.lista li {
+    margin-bottom: 10px;
+}
+
+
+/* VIDEO */
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 25px auto;
+    aspect-ratio: 16 / 9;
+}
+
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+
+/* TEMAS */
+
+.temas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+
+.tema {
+    background: #f4f6f8;
+    padding: 18px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+
+@media (max-width: 700px) {
+
+    .curso-hero h2 {
+        font-size: 28px;
+    }
+
+    .curso-contenido {
+        padding: 20px;
+    }
+
+    .temas {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ============================= */
+/* PÁGINA DE CURSO - MEJORADA */
+/* ============================= */
+
+.etiqueta-semestre {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 6px 12px;
+    background: #1f618d;
+    color: white;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+.curso-hero h2 {
+    margin-top: 15px;
+}
+
+
+.curso-hero p {
+    max-width: 750px;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+
+.apartado-curso {
+    padding-bottom: 35px;
+    margin-bottom: 35px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.apartado-curso:last-child {
+    border-bottom: none;
+}
+
+
+.informacion-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+.info-card {
+    padding: 25px;
+    background: #f4f6f8;
+    border-radius: 10px;
+}
+
+
+.info-card span {
+    font-size: 35px;
+}
+
+
+.info-card h3 {
+    margin: 10px 0;
+}
+
+
+.proximamente {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+
+.proximamente p {
+    padding: 15px;
+    background: #f4f6f8;
+    border-radius: 8px;
+}
+
+
+@media (max-width: 700px) {
+
+    .informacion-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .proximamente {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ============================= */
+/* BIBLIOTECA DE IMÁGENES */
+/* ============================= */
+
+.categorias {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px 0 30px;
+}
+
+
+.categoria {
+    border: 1px solid #ccc;
+    background: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+.categoria:hover {
+    background: #f0f0f0;
+}
+
+
+.categoria.activa {
+    background: #17202a;
+    color: white;
+    border-color: #17202a;
+}
+
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+.imagen-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
+}
+
+
+.imagen-card:hover {
+    transform: translateY(-5px);
+}
+
+
+.imagen-card a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+.imagen-card h3 {
+    padding: 15px 15px 10px;
+}
+
+
+.imagen-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+
+.sin-resultados {
+    display: none;
+    text-align: center;
+    margin-top: 30px;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+}
+
+
+@media (max-width: 700px) {
+
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ============================= */
+/* DETALLE DE IMAGEN */
+/* ============================= */
+
+.detalle-imagen {
+    margin-top: 25px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+
+.detalle-imagen h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+
+.detalle-imagen > img {
+    width: 100%;
+    max-width: 700px;
+    max-height: 500px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 30px;
+    border-radius: 10px;
+}
+
+
+.descripcion-imagen {
+    max-width: 800px;
+    margin: auto;
+}
+
+
+.descripcion-imagen h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+
+.descripcion-imagen p {
+    margin-bottom: 15px;
+}
+
+/* ============================= */
+/* CONCEPTOS FUNDAMENTALES */
+/* ============================= */
+
+.conceptos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.concepto-card {
+    display: block;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    transition: 0.2s;
+}
+
+.concepto-card:hover {
+    transform: translateY(-5px);
+}
+
+.concepto-card span {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.concepto-card h3 {
+    margin-bottom: 10px;
+    font-size: 21px;
+}
+
+.concepto-card p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+
+@media (max-width: 900px) {
+
+    .conceptos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .conceptos-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
