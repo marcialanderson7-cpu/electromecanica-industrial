@@ -690,3 +690,100 @@ footer {
     }
 
 }
+
+
+/* =============================== */
+/* VISOR DE ILUSTRACIONES */
+/* =============================== */
+
+.visor-imagen {
+    width: min(900px, 92%);
+    max-width: 900px;
+    max-height: 90vh;
+    margin: auto;
+    padding: 30px;
+    border: none;
+    border-radius: 16px;
+    background: #ffffff;
+    color: #222222;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+.visor-imagen::backdrop {
+    background: rgba(10, 15, 22, 0.82);
+    backdrop-filter: blur(4px);
+}
+
+.visor-contenido {
+    text-align: center;
+}
+
+.visor-contenido h2 {
+    margin: 0 45px 20px;
+    font-size: 28px;
+    color: #17202a;
+}
+
+.visor-contenido img {
+    display: block;
+    max-width: 100%;
+    max-height: 65vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.visor-contenido p {
+    max-width: 700px;
+    margin: 18px auto 0;
+    line-height: 1.7;
+    color: #444444;
+}
+
+.cerrar-visor {
+    position: sticky;
+    top: 0;
+    float: right;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: #17202a;
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.cerrar-visor:hover {
+    background: #1f618d;
+}
+
+.imagen-card img {
+    cursor: zoom-in;
+}
+
+.imagen-card a:focus-visible,
+.cerrar-visor:focus-visible {
+    outline: 3px solid #1f618d;
+    outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+    .visor-imagen {
+        width: 96%;
+        padding: 18px;
+    }
+
+    .visor-contenido h2 {
+        font-size: 22px;
+        margin-left: 35px;
+        margin-right: 35px;
+    }
+
+    .visor-contenido img {
+        max-height: 60vh;
+    }
+}
